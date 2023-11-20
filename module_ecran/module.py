@@ -10,6 +10,7 @@ from .Ecran import Ecran
 #                          START                               #
 # **************************************************************#
 
-def run(robot, debug):
-    win = Ecran(robot, debug)
-    win.run()
+
+def run(robot, width, height):
+    win = Ecran(robot)
+    return win.run(width, height)

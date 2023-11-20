@@ -1,8 +1,9 @@
 import module_ecran as ecran
 
+
 class Robot:
     def __init__(self, debug=False):
-        self.ecran = ecran
+        self.ecran = ""
         self.visage = ""
         self.visages = {}
         self.debug = debug
@@ -11,11 +12,11 @@ class Robot:
         self.eleve = ""
         self.configurer()
 
-    def allumer_ecran(self):
-        """
-        Allume l'ecran pygame
-        """
-        self.ecran.run(self, self.debug)
+    def allumer_ecran(self, width=400, height=300):
+        self.ecran = ecran.run(self, width, height)
+
+    def eteindre_ecran(self):
+        self.ecran.quit()
 
     def switch_visage(self):
         # Temporary function
@@ -28,7 +29,7 @@ class Robot:
 
     def recevoir_visage(self):
         return self.visage
-    
+
     def recevoir_images_visages(self):
         return self.visages
 
@@ -51,7 +52,7 @@ class Robot:
 
     def change_eleve_connecte(self, connecte):
         self.connecte = connecte
-    
+
     def obtenir_eleve(self):
         return self.eleve
 
@@ -63,3 +64,9 @@ class Robot:
 
     # def allumer_camera(self):
     #     self.camera.run()
+
+    def lancer_boucle(self):
+        self.ecran.loop()
+
+    def changer_titre(self, title):
+        self.ecran.title(title)

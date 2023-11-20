@@ -10,6 +10,7 @@ from .data import STATUS
 from . import camera
 import time
 
+
 class Visuel:
     def __init__(self, robot, window, debug=False):
         self.debug = debug
