@@ -6,9 +6,7 @@
 
 import pygame as pg
 import os
-from .data import STATUS
 from . import camera
-import time
 
 
 class Visuel:
@@ -18,11 +16,14 @@ class Visuel:
         self.window = window
         self.width = self.window.getWidth()
         self.height = self.window.getHeight()
-        self.surface_visage = pg.Surface((10, 10))
         self.img = {}
         self.charger_images()
         self.carte = None
         self.connect_msg = ""
+        self.photo = None
+        self.display_photo = False
+        self.display_carte = False
+        self.display_visage = False
 
     def charger_images(self):
         img = self.robot.recevoir_images_visages()
@@ -32,16 +33,23 @@ class Visuel:
     def charger_carte(self, filepath):
         self.carte = pg.image.load(os.getcwd() + filepath)
 
+    def charger_photo(self):
+        self.photo = pg.image.load(os.getcwd() + "/photo.jpg")
+        self.display_photo = True
+
+    def afficher_photo(self):
+        offset_x = self.photo.get_size()[0] / 2
+        offset_y = self.photo.get_size()[1] / 2
+        self.window.surface.blit(
+            self.photo, (self.width/2 - offset_x, self.height/2 - offset_y))
+
     def afficher(self):
-        if self.window.getStatus() == STATUS['DISPLAY']:
+        if self.display_carte:
+            self.afficher_carte()
+        if self.display_photo:
+            self.afficher_photo()
+        if self.display_visage:
             self.afficher_visage()
-        if self.window.getStatus() == STATUS['CAMERA']:
-            self.afficher_camera()
-        if self.window.getStatus() == STATUS['MENU']:
-            if self.robot.eleve_connecte() == "maybe":
-                self.afficher_carte()
-            # elif self.robot.eleve_connecte() == "no":
-            #     print("Connecte toi. (temp: CAMERA)")
 
     def afficher_carte(self):
         offset_x = self.carte.get_size()[0] / 2
@@ -49,7 +57,6 @@ class Visuel:
         print(self.carte.get_size()[0], self.carte.get_size()[1])
         self.window.surface.blit(
             self.carte, (self.width/2 - offset_x, self.height/2 - offset_y))
-        print(self.connect_msg)
 
     def afficher_visage(self):
         robot_face = self.robot.recevoir_visage()
@@ -58,11 +65,8 @@ class Visuel:
         self.window.surface.blit(
             self.img[robot_face], (self.width/2 - offset_x, self.height/2 - offset_y))
 
-    def afficher_camera(self):
-        time.sleep(1)
-        camera.cam_track_cards_app(self.robot, self.window)
-        if self.robot.eleve_connecte() == "maybe":
-            eleve = self.robot.obtenir_eleve()
-            self.charger_carte("/cards/" + eleve + ".png")
-            self.connect_msg = f"Bonjour {eleve}, est ce que c'est bien toi ?"
-        self.window.setStatus(STATUS['MENU'])
+    def afficher_camera(self, ui):
+        camera.cam_track_cards_app(ui, self.window)
+
+    def set_visage(self, set):
+        self.display_visage = set

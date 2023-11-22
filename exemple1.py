@@ -1,5 +1,4 @@
 from Robot import Robot
-
 robot = Robot()
 
 longueur = 800
