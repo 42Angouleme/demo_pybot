@@ -22,7 +22,7 @@ def cam_track_cards_app(interface, window) -> int | None:
 
         frame, users = card_tracker.draw(frame)
         if (window.check_capture()):
-            cv2.imwrite("photo.jpg", frame)
+            cv2.imwrite("pybot/photo.jpg", frame)
             time.sleep(1)
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 

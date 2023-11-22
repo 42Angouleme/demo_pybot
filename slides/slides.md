@@ -150,3 +150,18 @@ def main():
     robot.donner_la_parole()
     robot.dire_bonjour()
 ```
+
+
+---
+
+# 6. La bibliothèque Pybot
+
+---
+
+<!-- _backgroundImage: url('https://marp.app/assets/hero-background.svg') -->
+
+Pybot est une bibliothèque avec une Class Robot que l'on peut utiliser pour faire un programme graphique.
+
+Voici présenté ici les méthodes et des exemples d'utilisation:
+
+---
