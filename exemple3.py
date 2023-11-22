@@ -1,4 +1,4 @@
-from Robot import Robot
+from robot import Robot
 robot = Robot()
 
 
@@ -22,7 +22,7 @@ def afficher_photo():
     if robot.verifier_photo():
         robot.afficher_photo()
     else:
-        robot.afficher_visage_triste()
+        robot.afficher_visage_content()
 
 
 def lancer_robot():

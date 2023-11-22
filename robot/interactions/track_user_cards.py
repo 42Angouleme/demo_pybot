@@ -8,7 +8,8 @@ import os
 from cv2.typing import MatLike
 from typing import List, Tuple
 
-from module_camera import ImageComparator
+from ..module_camera import ImageComparator
+
 
 class UserCardsTracker:
     def __init__(self):
@@ -19,8 +20,9 @@ class UserCardsTracker:
     def _get_users_info():
         # read all the cards and extract their names as users
         users = ['bob', 'joe', 'tom', 'toto']
-        path = os.getcwd() + "/cards/"
-        img_paths = [path + "bob.png", path + "joe.png", path + "tom.png", path + "toto.png"]
+        path = os.getcwd() + "/robot/cards/"
+        img_paths = [path + "bob.png", path + "joe.png",
+                     path + "tom.png", path + "toto.png"]
         return users, img_paths
 
     # @staticmethod

@@ -28,13 +28,14 @@ class Visuel:
     def charger_images(self):
         img = self.robot.recevoir_images_visages()
         for i in img:
-            self.img[i] = pg.image.load(os.getcwd() + "/assets/" + img[i])
+            self.img[i] = pg.image.load(
+                os.getcwd() + "/robot/assets/" + img[i])
 
     def charger_carte(self, filepath):
         self.carte = pg.image.load(os.getcwd() + filepath)
 
     def charger_photo(self):
-        self.photo = pg.image.load(os.getcwd() + "/photo.jpg")
+        self.photo = pg.image.load(os.getcwd() + "/robot/photo.jpg")
         self.display_photo = True
 
     def afficher_photo(self):

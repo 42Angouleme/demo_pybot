@@ -1,4 +1,4 @@
-import module_ecran as ecran
+from .module_ecran import module as ecran
 
 
 class Robot:
@@ -46,7 +46,7 @@ class Robot:
         self.configurer_visage(premier_visage)
 
     def configurer(self):
-        self.enregistrer_les_visages("assets/visages.txt")
+        self.enregistrer_les_visages("robot/assets/visages.txt")
 
     def lancer_boucle(self):
         self.ecran.loop()
@@ -71,7 +71,7 @@ class Robot:
 
     def verifier_photo(self):
         from pathlib import Path
-        return Path("photo.jpg").is_file()
+        return Path("robot/photo.jpg").is_file()
 
     def afficher_photo(self):
         self.ecran.afficher_photo()

@@ -2,7 +2,7 @@ import time
 import cv2
 import numpy as np
 import pygame as pg
-from interactions import UserCardsTracker
+from ..interactions import UserCardsTracker
 import os
 
 
