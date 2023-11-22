@@ -165,3 +165,7 @@ Pybot est une bibliothèque avec une Class Robot que l'on peut utiliser pour fai
 Voici présenté ici les méthodes et des exemples d'utilisation:
 
 ---
+
+---
+
+---

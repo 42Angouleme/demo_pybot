@@ -1,8 +1,8 @@
-from cardscan import (
-    scan,
-    card_contours_transform,
-    rotate_top_left_corner_low_density_transform,
-)
+# from cardscan import (
+#     scan,
+#     card_contours_transform,
+#     rotate_top_left_corner_low_density_transform,
+# )
 import cv2
 import os
 from cv2.typing import MatLike
