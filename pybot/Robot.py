@@ -46,7 +46,7 @@ class Robot:
         self.configurer_visage(premier_visage)
 
     def configurer(self):
-        self.enregistrer_les_visages("robot/assets/visages.txt")
+        self.enregistrer_les_visages("pybot/assets/visages.txt")
 
     def lancer_boucle(self):
         self.ecran.loop()
@@ -71,7 +71,7 @@ class Robot:
 
     def verifier_photo(self):
         from pathlib import Path
-        return Path("robot/photo.jpg").is_file()
+        return Path("pybot/photo.jpg").is_file()
 
     def afficher_photo(self):
         self.ecran.afficher_photo()

@@ -29,13 +29,13 @@ class Visuel:
         img = self.robot.recevoir_images_visages()
         for i in img:
             self.img[i] = pg.image.load(
-                os.getcwd() + "/robot/assets/" + img[i])
+                os.getcwd() + "/pybot/assets/" + img[i])
 
     def charger_carte(self, filepath):
         self.carte = pg.image.load(os.getcwd() + filepath)
 
     def charger_photo(self):
-        self.photo = pg.image.load(os.getcwd() + "/robot/photo.jpg")
+        self.photo = pg.image.load(os.getcwd() + "/pybot/photo.jpg")
         self.display_photo = True
 
     def afficher_photo(self):

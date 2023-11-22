@@ -20,7 +20,7 @@ class UserCardsTracker:
     def _get_users_info():
         # read all the cards and extract their names as users
         users = ['bob', 'joe', 'tom', 'toto']
-        path = os.getcwd() + "/robot/cards/"
+        path = os.getcwd() + "/pybot/cards/"
         img_paths = [path + "bob.png", path + "joe.png",
                      path + "tom.png", path + "toto.png"]
         return users, img_paths

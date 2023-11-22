@@ -33,7 +33,7 @@
         "font": {
             "name": "chicago",
             "size": 20,
-            "regular_path": "robot/assets/chicago.ttf"
+            "regular_path": "pybot/assets/chicago.ttf"
         }
     },
     "text_box": {

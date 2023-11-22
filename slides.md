@@ -139,7 +139,7 @@ Par la suite, vous pouvez donner des ordres à votre robot, en faisant appel aux
 # Exemple:
 
 ```python {.line-numbers}
-from Robot import Robot
+from pybot import Robot
 
 
 def main():

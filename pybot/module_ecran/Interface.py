@@ -15,7 +15,7 @@ class Interface:
         self.debug = debug
         self.window = window
         self.manager_main = pgui.UIManager(
-            (window.getWidth(), window.getHeight()), os.getcwd() + '/robot/assets/theme.json')
+            (window.getWidth(), window.getHeight()), os.getcwd() + '/pybot/assets/theme.json')
         self.robot = robot
         self.button = {}
         self.textbox = {}

@@ -1,4 +1,4 @@
-from robot import Robot
+from pybot import Robot
 robot = Robot()
 
 longueur = 800

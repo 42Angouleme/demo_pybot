@@ -1,5 +1,5 @@
-# from Robot import Robot
-from robot import Robot
+# from pybot import Robot
+from pybot import Robot
 robot = Robot()
 print(robot)
 
