@@ -81,7 +81,7 @@ class Ecran:
 
     def quit(self):
         self.stop()
-        pg.quit()
+        # pg.quit()
         sys.exit()
 
     def ajouter_bouton(self, titre, function):
