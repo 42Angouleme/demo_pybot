@@ -166,6 +166,114 @@ Voici présenté ici les méthodes et des exemples d'utilisation:
 
 ---
 
----
+# Pour demarrer nous avons besoin d'importer la bibliothèque et de démarrer le robot:
+
+```python
+from pybot import Robot
+
+robot = Robot()
+```
 
 ---
+
+# Pour allumer l'écran avec une longueur et une hauteur :
+
+```python
+robot.allumer_ecran(800, 600)
+```
+
+
+---
+
+# Pour éteindre l'écran :
+
+```python
+robot.eteindre_ecran()
+```
+
+
+---
+
+# Pour changer le titre :
+
+```python
+robot.changer_titre("Exemple 1")
+```
+
+---
+
+# Pour terminer le programme nous avons besoin de lancer la boucle:
+
+```python
+robot.lancer_boucle()
+```
+
+---
+
+# Un exemple de programme complet :
+
+```python
+from pybot import Robot
+
+robot = Robot()
+
+longueur = 800
+hauteur = 600
+
+robot.allumer_ecran(longueur, hauteur)
+
+robot.changer_titre("Exemple 1")
+
+robot.lancer_boucle()
+```
+
+---
+
+# Pour ajouter un bouton, avec le nom du bouton et la fonction executé au click de ce bouton :
+
+```python
+robot.ajouter_bouton("Quitter", robot.eteindre_ecran)
+```
+
+---
+
+# Pour afficher la caméra :
+
+```python
+robot.afficher_camera()
+```
+
+---
+
+# Pour éteindre la caméra :
+
+```python
+robot.éteindre_camera()
+```
+
+---
+
+# Pour enregistrer une photo :
+
+```python
+robot.enregistrer_photo()
+```
+
+---
+
+# Pour afficher une photo :
+
+```python
+robot.afficher_photo()
+```
+
+---
+
+# Pour afficher un visage :
+
+```python
+robot.afficher_visage_triste()
+robot.afficher_visage_content()
+robot.afficher_visage_triste()
+robot.afficher_visage_triste()
+```
