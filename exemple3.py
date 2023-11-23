@@ -5,6 +5,7 @@ robot = Robot()
 def afficher_camera():
     robot.supprimer_bouton("Afficher camera")
     robot.supprimer_bouton("Afficher photo")
+    robot.supprimer_bouton("Quitter robot")
     robot.ajouter_bouton("Enregistrer photo", robot.enregistrer_photo)
     robot.ajouter_bouton("Eteindre camera", eteindre_camera)
     robot.afficher_camera()
@@ -13,6 +14,7 @@ def afficher_camera():
 def eteindre_camera():
     robot.supprimer_bouton("Enregistrer photo")
     robot.supprimer_bouton("Eteindre camera")
+    robot.ajouter_bouton("Quitter robot", robot.eteindre_ecran)
     robot.ajouter_bouton("Afficher photo", afficher_photo)
     robot.ajouter_bouton("Afficher camera", afficher_camera)
     robot.eteindre_camera()
