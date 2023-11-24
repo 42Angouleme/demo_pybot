@@ -162,7 +162,7 @@ def main():
 
 Pybot est une bibliothèque avec une Class Robot que l'on peut utiliser pour faire un programme graphique.
 
-Voici présenté ici les méthodes et des exemples d'utilisation:
+Voici les méthodes et des exemples d'utilisation:
 
 ---
 
@@ -277,3 +277,4 @@ robot.afficher_visage_content()
 robot.afficher_visage_colere()
 robot.afficher_visage_fier()
 ```
+
