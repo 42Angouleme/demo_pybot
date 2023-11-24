@@ -154,7 +154,7 @@ def main():
 
 ---
 
-# 6. La bibliothèque Pybot
+# 6. La bibliothèque Pybot :
 
 ---
 
@@ -166,7 +166,7 @@ Voici les méthodes et des exemples d'utilisation:
 
 ---
 
-# Pour demarrer nous avons besoin d'importer la bibliothèque et de démarrer le robot:
+# Pour demarrer nous avons besoin d'importer la bibliothèque et de démarrer le robot :
 
 ```python
 from pybot import Robot
@@ -191,7 +191,6 @@ robot.allumer_ecran(800, 600)
 robot.eteindre_ecran()
 ```
 
-
 ---
 
 # Pour changer le titre :
@@ -202,7 +201,7 @@ robot.changer_titre("Exemple 1")
 
 ---
 
-# Pour terminer le programme nous avons besoin de lancer la boucle:
+# Pour terminer le programme nous avons besoin de lancer la boucle :
 
 ```python
 robot.lancer_boucle()
