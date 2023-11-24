@@ -1,0 +1,10 @@
+{
+    "editor.fontSize": 18,
+    "files.exclude": {
+        ".vscode": true,
+        "__pycache__": true,
+        "venv": true,
+        ".env": true,
+        "README.md": true
+    }
+}
