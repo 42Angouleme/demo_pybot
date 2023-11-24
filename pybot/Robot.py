@@ -77,6 +77,13 @@ class Robot:
     def afficher_photo(self):
         self.ecran.afficher_photo()
 
+    def supprimer_photo(self):
+        import os
+        try:
+            os.remove("pybot/photo.jpg")
+        except:
+            pass
+
     def afficher_visage_triste(self):
         self.configurer_visage("triste")
         self.ecran.afficher_visage()

@@ -216,10 +216,7 @@ from pybot import Robot
 
 robot = Robot()
 
-longueur = 800
-hauteur = 600
-
-robot.allumer_ecran(longueur, hauteur)
+robot.allumer_ecran()
 
 robot.changer_titre("Exemple 1")
 
@@ -268,6 +265,14 @@ robot.afficher_photo()
 
 ---
 
+# Pour supprimer une photo :
+
+```python
+robot.supprimer_photo()
+```
+
+---
+
 # Pour afficher un visage :
 
 ```python
@@ -277,3 +282,43 @@ robot.afficher_visage_colere()
 robot.afficher_visage_fier()
 ```
 
+---
+
+# Pour appliquer un filtre sur une photo :
+
+```python
+robot.appliquer_filtre_noir_et_blanc()
+robot.appliquer_filtre_amour()
+robot.tourner_photo()
+```
+
+
+---
+
+# Un autre exemple de programme complet :
+
+```python
+from pybot import Robot
+
+robot = Robot()
+
+longueur = 800
+hauteur = 600
+
+robot.allumer_ecran(longueur, hauteur)
+
+robot.changer_titre("Exemple 2")
+
+robot.ajouter_bouton("Quitter", robot.eteindre_ecran)
+robot.ajouter_bouton("Afficher visage", robot.afficher_visage_content)
+
+robot.lancer_boucle()
+```
+
+---
+
+# Objectif du programme à réaliser aujourd'hui:
+
+```
+Faire un programme qui affiche la caméra, prend une photo et qui applique un filtre sur la photo.
+```

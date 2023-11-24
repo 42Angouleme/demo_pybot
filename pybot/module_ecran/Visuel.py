@@ -63,6 +63,7 @@ class Visuel:
 
     def afficher_visage(self):
         robot_face = self.robot.recevoir_visage()
+        print(robot_face)
         offset_x = self.img[robot_face].get_size()[0] / 2
         offset_y = self.img[robot_face].get_size()[1] / 2
         self.window.surface.blit(
