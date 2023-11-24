@@ -274,6 +274,6 @@ robot.afficher_photo()
 ```python
 robot.afficher_visage_triste()
 robot.afficher_visage_content()
-robot.afficher_visage_triste()
-robot.afficher_visage_triste()
+robot.afficher_visage_colere()
+robot.afficher_visage_fier()
 ```

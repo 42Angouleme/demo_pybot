@@ -84,7 +84,7 @@ class Robot:
         self.configurer_visage("content")
         self.ecran.afficher_visage()
 
-    def D(self):
+    def afficher_visage_fier(self):
         self.configurer_visage("fier")
         self.ecran.afficher_visage()
 
