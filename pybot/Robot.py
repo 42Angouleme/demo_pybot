@@ -1,4 +1,5 @@
 from .module_ecran import module as ecran
+from .module_ecran.filtres import Filtres
 
 
 class Robot:
@@ -91,3 +92,22 @@ class Robot:
     def afficher_visage_colere(self):
         self.configurer_visage("colere")
         self.ecran.afficher_visage()
+
+    def appliquer_filtre(self, filtre):
+        self.ecran.visuel.appliquer_filtre(filtre)
+
+    def creer_filtre(self, filtre):
+        def appliquer_mon_filtre():
+            self.appliquer_filtre(filtre)
+
+        return appliquer_mon_filtre
+
+    def tourner_photo(self):
+        self.appliquer_filtre(Filtres.tourner)
+
+    def appliquer_filtre_amour(self):
+        self.appliquer_filtre(Filtres.vernis)
+        self.appliquer_filtre(Filtres.rose)
+
+    def appliquer_filtre_noir_et_blanc(self):
+        self.appliquer_filtre(Filtres.noir_et_blanc)

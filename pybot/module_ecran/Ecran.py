@@ -115,3 +115,6 @@ class Ecran:
 
     def afficher_visage(self):
         self.visuel.set_visage(True)
+
+    def tourner_photo(self):
+        self.visuel.tourner_photo()

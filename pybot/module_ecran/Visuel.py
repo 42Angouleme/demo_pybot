@@ -6,6 +6,8 @@
 
 import pygame as pg
 import os
+import numpy as np
+import cv2
 from . import camera
 
 
@@ -71,3 +73,12 @@ class Visuel:
 
     def set_visage(self, set):
         self.display_visage = set
+
+    def appliquer_filtre(self, filter):
+        image_path = os.getcwd() + "/pybot/photo.jpg"
+        image = cv2.imread(image_path)
+        if image is None:
+            print(f"Il faut prendre une image avant de pouvoir appliquer un filtre.")
+            return
+        filtered_image = filter(image)
+        cv2.imwrite(image_path, filtered_image)
