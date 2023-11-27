@@ -9,6 +9,30 @@ _backgroundImage: url('./1.png')
 ---
 ---
 
+# Cliquer sur l'icone extension
+
+---
+
+![width:800px](python1.png)
+
+---
+
+# Chercher python et installer
+
+---
+
+![width:800px](python2.png)
+
+---
+
+# Python est installé
+
+---
+
+![width:800px](python3.png)
+
+---
+
 # Ouvrir l'explorateur de fichiers
 
 ---
