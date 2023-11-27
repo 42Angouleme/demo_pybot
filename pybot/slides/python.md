@@ -225,7 +225,7 @@ robot.lancer_boucle()
 
 ---
 
-# Pour ajouter un bouton, avec le nom du bouton et la fonction executé au click de ce bouton :
+# Pour ajouter un bouton, avec le nom du bouton et la fonction executée au click de ce bouton :
 
 ```python
 robot.ajouter_bouton("Quitter", robot.eteindre_ecran)
